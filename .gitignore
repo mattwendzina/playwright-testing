@@ -1,0 +1,18 @@
+# Node.js dependencies
+/node_modules/
+
+# Build output
+/dist/
+/build/
+
+# Test coverage directory (for testing frameworks like Jest)
+coverage/
+
+client/test-results
+
+# npm-debug.log (for npm debug logs)
+npm-debug.log*
+
+# yarn lock (if using yarn)
+yarn.lock
+
