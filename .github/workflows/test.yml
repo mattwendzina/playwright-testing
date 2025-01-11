@@ -21,7 +21,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "16" # or whatever version you're using
+          node-version: "18" # or whatever version you're using
 
       # Step 3: Install dependencies in the 'client' directory
       - name: Install dependencies
