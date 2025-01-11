@@ -33,7 +33,7 @@ jobs:
       - name: Start the React app
         run: |
           cd client
-          npm start &
+          npm run dev &
         env:
           CI: true
 
