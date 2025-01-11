@@ -37,12 +37,21 @@ jobs:
         env:
           CI: true
 
-      # Step 5: Wait for the app to be ready before running Playwright tests
+        # Step 5: Wait for the React app to be ready
+      - name: Wait for React app to be ready
+        run: |
+          # Wait until React app is ready on localhost:5173
+          while ! curl -s http://localhost:5173; do
+            echo "Waiting for React app to be ready..."
+            sleep 5
+          done
+
+      # Step 6: Install Playwright dependencies
       - name: Wait for app to be ready
         run: |
           npx playwright install --with-deps
 
-      # Step 6: Run Playwright tests in the 'client' directory
+      # Step 7: Run Playwright tests
       - name: Run Playwright tests
         run: |
           cd client
